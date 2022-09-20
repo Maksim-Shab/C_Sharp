@@ -9,4 +9,4 @@ while(num_new <= num) {
     if(num_new % 2 == 0)
     Console.Write(num_new + " ");
     num_new++;
-}
+}git 
