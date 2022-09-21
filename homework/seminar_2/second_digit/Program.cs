@@ -12,4 +12,4 @@ if(num / 100 < 1) {
     return;
 }
 string n = num.ToString();
-Console.Write("Вторая цыфра введенного числа: " + n[1]);
+Console.Write("Вторая цифра введенного числа: " + n[1]);
