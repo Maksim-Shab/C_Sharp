@@ -1,5 +1,5 @@
 ﻿// Введите номер задачи!
-int name = 27;
+int name = 25;
 
 switch (name) {
 
@@ -26,7 +26,7 @@ switch (name) {
         int a = Convert.ToInt32(Console.ReadLine()); 
         Console.WriteLine("Введите степень:");
         int b = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine($"Результатом возведения числа {a} в степень {b}, является: {VozInPow(a, b)}.");
+        Console.WriteLine($"Результатом возведения числа '{a}' в степень '{b}', является: {VozInPow(a, b)}");
         } else {
         break;
         }
