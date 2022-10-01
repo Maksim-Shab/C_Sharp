@@ -1,0 +1,91 @@
+Console.Clear();
+
+Console.WriteLine("Введите N: ");
+
+int num = int.Parse(Console.ReadLine ());
+
+for (int i =1; i<=num; i++)
+Console.Write(Math.Pow(i, 2)+" ");
+
+
+
+
+Console.Clear();
+
+Console.WriteLine("Введите N: ");
+
+int num = int.Parse(Console.ReadLine ());
+
+for (int i =1; i<=num; i++)
+Console.Write(Math.Pow(i, 2)+" ");
+
+
+
+Console.WriteLine("Введите число: ");
+int A = int.Parse(Console.ReadLine());
+int b = 1;
+while( b<A)
+{
+    Console.WriteLine(Math.Pow(b,2));
+    b++;
+}
+
+
+
+
+
+Console.WriteLine("Введите X1: ");
+double X1 = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("Введите Y1: ");
+double Y1 = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("Введите X2: ");
+double X2 = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("Введите Y2: ");
+double Y2 = Convert.ToDouble(Console.ReadLine());
+
+double dist = Math.Sqrt(Math.Pow((X2 - X1),2) + Math.Pow((Y2-Y1),2));
+
+Console.WriteLine("Длина отрезка = {0}", Math.Round(dist,2));
+
+
+
+
+
+Console.WriteLine("Enter coordinates point А.");
+int x_A = int.Parse(Console.ReadLine());
+int y_A = int.Parse(Console.ReadLine());
+Console.WriteLine("Enter coordinates point B:");
+int x_B = int.Parse(Console.ReadLine());
+int y_B = int.Parse(Console.ReadLine());
+
+double Line = Math.Sqrt(Math.Pow((x_A - x_B),2)+Math.Pow((y_A - y_B),2));
+
+Console.WriteLine($"Distance between A and B: {Line}");
+
+
+
+
+
+Console.WriteLine("Введите x1: ");
+int x1 = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Введите y1: ");
+int y1 = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Введите x2: ");
+int x2 = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Введите y2: ");
+int y2 = int.Parse(Console.ReadLine());
+
+double r = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 -  y1, 2));
+
+Console.WriteLine($"Расстояние равно {Math.Round(r, 2)}");
+
+
+
+
+
