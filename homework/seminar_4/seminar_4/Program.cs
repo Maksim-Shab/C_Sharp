@@ -1,5 +1,5 @@
 ﻿// Введите номер задачи!
-int name = 29;
+int name = 27;
 
 switch (name) {
 
@@ -43,7 +43,7 @@ switch (name) {
     Console.Clear();
 
 
-    Console.WriteLine("Введите число: ");
+    Console.WriteLine("Введите число, что-бы посчитать сумму цифр: ");
     int number = int.Parse(Console.ReadLine());
     int numberLength = Convert.ToString(number).Length;
     int numberSumm = 0;
