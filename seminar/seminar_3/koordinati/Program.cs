@@ -7,15 +7,15 @@ int y = int.Parse(Console.ReadLine());
 void FindChevert(int x, int y){
     
 if(x > 0 && y > 0) {
-   return Console.WriteLine("1");
+   Console.WriteLine("1");
 }
 if(x < 0 && y > 0) {
-   return Console.WriteLine("2");
+   Console.WriteLine("2");
 }
 if(x < 0 && y < 0) {
-   return Console.WriteLine("4");
+   Console.WriteLine("4");
 }
 else {
-   return Console.WriteLine("1");
+   Console.WriteLine("1");
 }
 }

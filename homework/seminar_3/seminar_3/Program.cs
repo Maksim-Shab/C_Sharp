@@ -110,28 +110,28 @@ switch(name) {
     // Введённая буква: "о",
     // массив ("Москва", "Тюмень", "Новосибирск") -> "Новосибирск"
 
-    Console.Clear();
+//     Console.Clear();
     
-    var array = new string[] {"Барнаул", "Кемерово", "Тюмень", "Новосибирск", "Манжерок"};
-    Console.WriteLine("Введите букву: ");
-    string letter = Console.ReadLine();
+//     var array = new string[] {"Барнаул", "Кемерово", "Тюмень", "Новосибирск", "Манжерок"};
+//     Console.WriteLine("Введите букву: ");
+//     string letter = Console.ReadLine();
    
-   int numLetter = 0;
-   for (int i = 0; i < array.Length; i++){
-        int max = 0;
-        string city = array[i];
-        for (int j = 0; j < city.Length; j++){
-            if(letter == city[j]){
-                numLetter ++;
-                if(numLetter > max) {
-                    max = numLetter;
-                }
-            }
+//    int numLetter = 0;
+//    for (int i = 0; i < array.Length; i++){
+//         int max = 0;
+//         string city = array[i];
+//         for (int j = 0; j < city.Length; j++){
+//             if(letter == city[j]){
+//                 numLetter ++;
+//                 if(numLetter > max) {
+//                     max = numLetter;
+//                 }
+//             }
             
-        }
-   }
+//         }
+//    }
 
-   System.Console.WriteLine(letter); 
+//    System.Console.WriteLine(letter); 
     
 
     break;
