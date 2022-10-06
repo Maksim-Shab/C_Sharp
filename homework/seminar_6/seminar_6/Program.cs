@@ -1,6 +1,6 @@
 ﻿// seminar_6
 
-int name = 41;
+int name = 43;
 
  switch(name) {
 
