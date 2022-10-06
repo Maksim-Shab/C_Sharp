@@ -97,7 +97,7 @@ switch(name){
     double MaxElement(double[] array2) {
         for (int i = 0; i < array2.Length; i++)
         {
-            if(array2[i] > max && array2[i] < 0) {
+            if(array2[i] > max) {
                 max = array2[i];
             }
         }
