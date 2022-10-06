@@ -1,6 +1,6 @@
 ﻿// seminar_6
 
-int name = 41;
+int name = 43;
 
  switch(name) {
 
@@ -29,6 +29,7 @@ int name = 41;
         }
         }
         catch{
+            Console.Clear();
             break;
         }    
     }
@@ -41,7 +42,38 @@ int name = 41;
             positiveNumbers ++;
         }
     }
+    Console.WriteLine("Введенные вами числа: " + "[" + String.Join(",", array) + "]");
     Console.WriteLine("Kоличество значений больше '0' равно: " + positiveNumbers);
    
+    break;
+
+    case(43):
+
+    // Напишите программу, которая найдёт точку пересечения двух прямых,
+    // заданных уравнениями
+    // y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2
+    // задаются пользователем.
+    // b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
+
+    Console.Clear();
+
+    Console.WriteLine("Введите значение 'b1': ");
+    double b1 = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Введите значение 'k1': ");
+    double k1 = Convert.ToInt32(Console.ReadLine());
+
+    Console.WriteLine("Введите значение 'b2': ");
+    double b2 = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Введите значение 'k2': ");
+    double k2 = Convert.ToInt32(Console.ReadLine());
+
+    // y = 5 * x + 2
+    // y  = 9 * x + 4
+
+    double x = -(b2 - b1) / (k2 - k1);
+    double y = k2 * x + b2;
+
+    Console.WriteLine("Прямые пересекаються в точке с координатами Х: " + x + ", Y: " + y);
+
     break;
  }
