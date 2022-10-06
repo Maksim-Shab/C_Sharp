@@ -67,9 +67,6 @@ int name = 43;
     Console.WriteLine("Введите значение 'k2': ");
     double k2 = Convert.ToInt32(Console.ReadLine());
 
-    // y = 5 * x + 2
-    // y  = 9 * x + 4
-
     double x = -(b2 - b1) / (k2 - k1);
     double y = k2 * x + b2;
 
