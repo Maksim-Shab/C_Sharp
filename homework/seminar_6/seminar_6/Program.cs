@@ -1,6 +1,6 @@
 ﻿// seminar_6
 
-int name = 43;
+int name = 41;
 
  switch(name) {
 
@@ -24,7 +24,7 @@ int name = 43;
             int number = Convert.ToInt32(Console.ReadLine());
             array[i] = number;
             Console.Clear();
-            Console.WriteLine("Введенные вами числа: " + "[" + String.Join(",", array) + "]");
+            Console.WriteLine("Введенные вами числа: " + String.Join(",", array));
             Array.Resize(ref array, array.Length + 1);
         }
         }
@@ -42,7 +42,7 @@ int name = 43;
             positiveNumbers ++;
         }
     }
-    Console.WriteLine("Введенные вами числа: " + "[" + String.Join(",", array) + "]");
+    Console.WriteLine("Введенные вами числа: " + String.Join(",", array));
     Console.WriteLine("Kоличество значений больше '0' равно: " + positiveNumbers);
    
     break;
