@@ -75,7 +75,6 @@ switch(name){
     break;
 
     case(38):
-                    // НЕ РАБОТАЕТ!!!!
 
     // // Задайте массив вещественных чисел.
     // // Найдите разницу между максимальным и минимальным элементов массива.
@@ -84,10 +83,9 @@ switch(name){
     Console.Clear();
 
     double[] array2 = new double[4];
-    double max = array2[0];
-    double min = array2[0];
-    double result2 = 0;
-
+    double max = -int.MaxValue;
+    double min = int.MaxValue;
+  
     double[] FillArray2(double[] array2) {
         for (int i = 0; i < array2.Length; i++)
         {
@@ -115,7 +113,6 @@ switch(name){
         }
         return min;
     }
-            // НЕ РАБОТАЕТ!!!!
     
     FillArray2(array2);
     Console.WriteLine("Получился мыссив: " + "[" + String.Join(",", array2) + "]");
