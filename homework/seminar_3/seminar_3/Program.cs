@@ -1,5 +1,5 @@
 ﻿// Введите номер задачи!
-int name = 23;
+int name = 25;
 
 switch(name) {
 
@@ -10,7 +10,7 @@ switch(name) {
         Console.Clear();
 
         Console.WriteLine("Введите пятизначное число: ");
-        int num = int.Parse(Console.ReadLine());
+        int num = Convert.ToInt32(Console.ReadLine());
         string s = num.ToString();
         int n = s.Length - 1;
         int j = 0;
@@ -79,6 +79,60 @@ switch(name) {
     for(int e = 1; e <= a; e++) {
         Console.Write(Math.Pow(e , 3) + " ");
     }
+
+    break;
+
+    case(24):
+
+    // Напишите программу, которая на вход принимает радиус круга
+    // и находит его площадь округленную до целого числа,
+    // необходимо вывести максимальную цифру
+    // в полученном округлённом значении площади круга.
+    // 10 -> 4
+    // 20 -> 7
+    // 30 -> 8
+
+    Console.Clear();
+
+    Console.WriteLine("Введите радиус круга: ");
+    int radius = Convert.ToInt32(Console.ReadLine());
+    double S = 3.14 * (Math.Pow(radius, 2));
+
+    Console.WriteLine(Math.Round(S));
+
+    break;
+
+    case (25):
+    // Напишите программу, которая на вход принимает букву,
+    // необходимо создать массив из 5 названий городов,
+    // и вывести на экран те (тот), где чаще всего встречается введённая
+    // буква.
+    // Введённая буква: "о",
+    // массив ("Москва", "Тюмень", "Новосибирск") -> "Новосибирск"
+
+    Console.Clear();
+    
+    var array = new string[] {"Барнаул", "Кемерово", "Тюмень", "Новосибирск", "Манжерок"};
+    Console.WriteLine("Введите букву: ");
+    string letter = Console.ReadLine();
+   
+   int numLetter = 0;
+   for (int i = 0; i < array.Length; i++){
+        int max = 0;
+        string city = array[i];
+        for (int j = 0; j < city.Length; j++){
+            if(letter == city[j]){
+                numLetter ++;
+                if(numLetter > max) {
+                    max = numLetter;
+                }
+            }
+            
+        }
+   }
+
+   System.Console.WriteLine(letter); 
+    
 
     break;
 }

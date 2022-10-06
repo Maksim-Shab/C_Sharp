@@ -1,7 +1,7 @@
 ﻿// seminar_6
 
 
-switch(6){
+switch(4){
 
     case(1):
 

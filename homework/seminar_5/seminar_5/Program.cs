@@ -82,8 +82,8 @@ switch(name){
     Console.Clear();
 
     double[] array2 = new double[4];
-    double max = 0;
-    double min = 0;
+    double max = array2[0];
+    double min = array2[0];
     double result2 = 0;
 
     double[] FillArray2(double[] array2) {
@@ -97,7 +97,7 @@ switch(name){
     double MaxElement(double[] array2) {
         for (int i = 0; i < array2.Length; i++)
         {
-            if(max < array2[i]) {
+            if(array2[i] > max && array2[i] < 0) {
                 max = array2[i];
             }
         }
@@ -114,22 +114,13 @@ switch(name){
         return min;
     }
     
-    double MaxVsMin(double max, double min) {
-        if(max < 0 && min <0) {
-            result2 = max - min;
-        } else if(max > 0 && min < 0) {
-            result2 = max + min;
-        } else if(max > 0 && min > 0){
-            result2 = max - min;
-        }
-        return result2;
-    }
     
     FillArray2(array2);
     Console.WriteLine("Получился мыссив: " + "[" + String.Join(",", array2) + "]");
     MaxElement(array2);
     MinElement(array2);
-    Console.WriteLine("Разница между максимальным и минимальным элементами массива является: " + MaxVsMin(max, min));
+    System.Console.WriteLine(max + " " + min);
+    Console.WriteLine("Разница между максимальным и минимальным элементами массива является: " + (max - min));
 
     break;
 }
