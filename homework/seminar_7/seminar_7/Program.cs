@@ -1,5 +1,5 @@
 ﻿// seminar_7
- int name = 50;
+ int name = 52;
 
  switch(name){
 
@@ -110,7 +110,22 @@
     // 8 4 2 4
     // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
+    Console.Clear();
 
+    int[,] array3 = FillArray(4,5);
+    System.Console.WriteLine("Массив: ");
+    PrintArray1(array3);
+
+    for (int j = 0; j < array3.GetLength(1); j++)
+    {
+        int summ = 0;
+        for (int i = 0; i < array3.GetLength(0); i++)
+        {
+            summ += array3[i, j];
+        }
+        double averageValue = ((double)summ / array3.GetLength(0));
+        System.Console.WriteLine("Среднее арифметическое столбца №" + (j + 1)  + " составляет: " + Math.Round(averageValue,1));
+    }
 
     break;
 
