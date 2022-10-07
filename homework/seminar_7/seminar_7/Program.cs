@@ -1,5 +1,5 @@
 ﻿// seminar_7
- int name = 52;
+ int name = 47;
 
  switch(name){
 
@@ -33,7 +33,7 @@
         return fillArray;
     }
     
-     void PrintArray(double[,] inputArray)
+    void PrintArray(double[,] inputArray)
     {
         for (int i = 0; i < inputArray.GetLength(0); i++)
         {
