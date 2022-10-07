@@ -127,6 +127,8 @@
         System.Console.WriteLine("Среднее арифметическое столбца №" + (j + 1)  + " составляет: " + Math.Round(averageValue,1));
     }
 
-    break;
+    System.Console.WriteLine();
 
+    break;
+    
  }
