@@ -1,5 +1,5 @@
 ﻿// seminar_7
- int name = 47;
+ int name = 50;
 
  switch(name){
 
@@ -57,8 +57,46 @@
     // 8 4 2 4
     // 17 -> такого числа в массиве нет
 
+    Console.Clear();
+    
+    System.Console.Write("Введите индекс строки: ");
+    int rowIndex = Convert.ToInt32(Console.ReadLine());
+    System.Console.Write("Введите индекс столбца: ");
+    int columnIndex = Convert.ToInt32(Console.ReadLine());
+    int[,] array2 = FillArray(6,9);
+    System.Console.WriteLine("Полученный массив: ");
+    PrintArray1(array2);
+    if(0 <= rowIndex && rowIndex < array2.GetLength(0) 
+        && 0 <= columnIndex && columnIndex < array2.GetLength(1)){
+            System.Console.WriteLine("Результатом введенных индексов является: " + array2[rowIndex, columnIndex]);
+            System.Console.WriteLine();
+    } else {
+        System.Console.WriteLine("Такого числа в массиве нет!");
+    }
+    
+    int[,] FillArray(int rows, int columns) {
+        int[,] fillArray = new int[rows, columns];
+        for (int i = 0; i < rows; i++)
+        {
+            for (int j = 0; j < columns; j++)
+            {
+                fillArray[i, j] = new Random().Next(1,9);
+            }
+        }
+        return fillArray;
 
-
+    }
+    
+    void PrintArray1(int[,] inputArray) {
+        for (int i = 0; i < inputArray.GetLength(0); i++)
+        {
+            for (int j = 0; j < inputArray.GetLength(1); j++)
+            {
+                System.Console.Write(" " +  inputArray[i, j]);    
+            }
+            System.Console.WriteLine();
+        }
+    }
 
     break;
     
