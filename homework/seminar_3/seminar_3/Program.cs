@@ -110,29 +110,32 @@ switch(name) {
     // Введённая буква: "о",
     // массив ("Москва", "Тюмень", "Новосибирск") -> "Новосибирск"
 
-//     Console.Clear();
+    Console.Clear();
     
-//     var array = new string[] {"Барнаул", "Кемерово", "Тюмень", "Новосибирск", "Манжерок"};
-//     Console.WriteLine("Введите букву: ");
-//     string letter = Console.ReadLine();
-   
-//    int numLetter = 0;
-//    for (int i = 0; i < array.Length; i++){
-//         int max = 0;
-//         string city = array[i];
-//         for (int j = 0; j < city.Length; j++){
-//             if(letter == city[j]){
-//                 numLetter ++;
-//                 if(numLetter > max) {
-//                     max = numLetter;
-//                 }
-//             }
-            
-//         }
-//    }
-
-//    System.Console.WriteLine(letter); 
-    
+    string[] array = new string[] {"Барнаул", "Кемерово", "Тюмень", "Новосибирск", "Манжерок"};
+    Console.WriteLine("Массив: [" + String.Join(",", array) + "]");
+    Console.Write("Введите букву: ");
+    string letter = Console.ReadLine();
+    SummLetters();
+    void SummLetters() {
+        int number = 0;
+        for (int i = 0; i < array.Length; i++)
+        {
+            string city = array[i];
+            int summLetters = 0;
+            for (int k = 0; k < city.Length; k++)
+            {
+                if(city[k].ToString().ToLower() == letter.ToLower()) {
+                    summLetters ++;
+                }
+            }
+            if(summLetters >0) {
+                Console.WriteLine("Введенная вами буква '" + letter + "' встречается в названии города " + array[i] + " '" + summLetters + "' раз.");
+                Console.WriteLine();
+            }    
+            number = summLetters;            
+        }
+    }
 
     break;
 }
