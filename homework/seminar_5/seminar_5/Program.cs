@@ -149,12 +149,13 @@ switch(name){
         return newArray;
     }
 
-    int SrednArifmArray(int[] array) {
-        int srednArifmArray = 0;
+    double SrednArifmArray(int[] array) {
+        double srednArifmArray = 0;
         for (int i = 0; i < array.Length; i++)
         {
             srednArifmArray += array[i];
         }
+        srednArifmArray = Math.Round(srednArifmArray  / array.Length, 2);
         return srednArifmArray;
     }
     
