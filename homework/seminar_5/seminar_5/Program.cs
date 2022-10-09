@@ -1,6 +1,6 @@
 ﻿// seminar_5
 
-int name = 38;
+int name = 39;
 
 switch(name){
 
@@ -120,6 +120,80 @@ switch(name){
     MinElement(array2);
     System.Console.WriteLine(max + " " + min);
     Console.WriteLine("Разница между максимальным и минимальным элементами массива является: " + (max - min));
+
+    break;
+
+    case(39):
+    // Задайте одномерный массив, заполненный случайными числами.
+    // Из входного массива сформируйте массив с чётными
+    // и массив с нечётными значениями элементов входного массива.
+    // Найдите ср. арифметическое из полученных значений элементов массивов
+    // и выведите результат сравнения средних арифметических.
+    // [1,2,3,4] -> средн. арифм. значений элементов массива 
+    // с чётными числами > средн. арифм. значений элементов с нечётными числами
+    // [2,3,5,7] -> средн. арифм. массива значений элементов
+    // с нечётными числами > средн. арифм. значений элементов с чётными числами
+    // [1,2,5,4] -> средн. арифм. значений элементов массива
+    // с нечётными числами = средн. арифм. значений элементов с чётными числами
+
+    Console.Clear();
+
+    int[] array3 = NewArray();
+
+    int[] NewArray(){
+        int[] newArray = new int[8];
+        for (int i = 0; i < newArray.Length; i++)
+        {
+            newArray[i] = new Random().Next(1, 9);
+        }
+        return newArray;
+    }
+
+    int SrednArifmArray(int[] array) {
+        int srednArifmArray = 0;
+        for (int i = 0; i < array.Length; i++)
+        {
+            srednArifmArray += array[i];
+        }
+        return srednArifmArray;
+    }
+    
+    int[] chetArray = new int[1];
+    int[] nechArray = new int[1];
+    int j = 0;
+    int l = 0;
+    for (int i = 0; i < array3.Length - 1; i++)
+    {
+        if(array3[i] % 2 != 0) {
+            nechArray[j] = array3[i];
+            Array.Resize(ref nechArray, nechArray.Length + 1);
+            j++;
+        }
+        else {
+            chetArray[l] = array3[i];
+            Array.Resize(ref chetArray, chetArray.Length + 1);
+            l++;
+        }
+    }
+    Array.Resize(ref chetArray, chetArray.Length - 1);
+    Array.Resize(ref nechArray, nechArray.Length - 1);
+
+
+    Console.WriteLine("Исходный массив: " + "[" + String.Join(",", NewArray()) + "]");   
+    Console.WriteLine("Массив из нечетных значений: "
+        + "[" + String.Join(",", nechArray) + "] - "
+        + "среднее арифметическое: " + SrednArifmArray(nechArray));
+    Console.WriteLine("Массив из четных значений: "
+        + "[" + String.Join(",", chetArray) + "] - "
+        + "среднее арифметическое: " + SrednArifmArray(chetArray));
+
+    if(SrednArifmArray(nechArray) == SrednArifmArray(chetArray)){
+        Console.WriteLine("Средн. арифм. четного массива = нечетному");
+    } else if(SrednArifmArray(nechArray) < SrednArifmArray(chetArray)){
+        Console.WriteLine("Средн. арифм. четного массива > нечетного");
+    } else {
+        Console.WriteLine("Средн. арифм. четного массива < нечетного");
+    }
 
     break;
 }
