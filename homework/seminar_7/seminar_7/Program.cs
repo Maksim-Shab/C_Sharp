@@ -1,5 +1,5 @@
 ﻿// seminar_7
- int name = 47;
+ int name = 48;
 
  switch(name){
 
@@ -130,5 +130,41 @@
     System.Console.WriteLine();
 
     break;
-    
+
+    case(48):
+    // Задайте двумерный массив из целых чисел.Определите, есть столбец в массиве,
+    // сумма которого, больше суммы элементов расположенных в четырех "углах"
+    // двумерного массива.
+    // Например, задан массив:
+    // 4 4 7 5
+    // 4 3 5 3
+    // 8 1 6 8 -> нет
+
+    Console.Clear();
+
+    int[,] array4 = FillArray(4,4);
+    PrintArray1(array4);
+    SummColumns(array4);
+
+    int SummCorners(int[,] array){
+        int summCorners = array[0,0] + array[0, array.GetLength(1)-1]
+        + array[array.GetLength(0)-1, 0] + array[array.GetLength(0)-1, array.GetLength(1)-1];
+        return summCorners;
+    }
+
+    void SummColumns(int[,] array) {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            int summColumns = 0;
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                summColumns = summColumns + array[i,j];
+            }
+            if(summColumns > SummCorners(array)) {
+                Console.WriteLine("Сумма столбца №" + (j +1) + " равна '" + summColumns + "' и больше суммы углов (" + SummCorners(array) + ").");
+            }
+        }
+    }
+
+    break;    
  }
