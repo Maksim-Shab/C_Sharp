@@ -1,6 +1,6 @@
 ﻿// seminar_5
 
-int name = 39;
+int name = 40;
 
 switch(name){
 
@@ -194,6 +194,70 @@ switch(name){
         Console.WriteLine("Средн. арифм. четного массива > нечетного");
     } else {
         Console.WriteLine("Средн. арифм. четного массива < нечетного");
+    }
+
+    break;
+
+    case(40):
+    // Задайте одномерный массив из N элементов,
+    // заполненный случайными числами. Необходимо определить,
+    // в какой последовательности заданы элементы массива:
+    // по возрастанию, по убыванию, хаотично, или все элементы одинаковы.
+    // [1,2,3,4] -> по возрастанию
+    // [4,3,2,1] -> по убыванию    
+    // [4,2,3,1] -> хаотично
+    // [1,1,1,1] -> все элементы равны
+
+    Console.Clear();
+
+    int[] array4 = FillArray3();
+    PrintArray(array4);
+
+    int[] FillArray3(){
+        int[] fillArray = new int[4];
+        for (int i = 0; i < fillArray.Length; i++)
+        {
+            fillArray[i] = new Random().Next(1,9);
+        }
+        return fillArray;
+    }
+
+    void PrintArray(int[] array) {
+        Console.WriteLine("Массив: [" + String.Join(",", array) + "]");
+    }
+     
+    int max3 = array4[0];
+    int min3 = array4[0];
+    int g = 1;
+    int f = 1;
+    int s = 1;
+    for (int i = 1; i < array4.Length; i++ )
+    {
+        if(max3 < array4[i] && i == g){
+            if(g == i){
+                max3 = array4[i];
+                g++;
+            }
+        } 
+        else if (min3 > array4[i] && i == f){
+            if(f == i) {
+                min3 = array4[i];
+                f++;
+            }    
+        }
+        else if(array4[0] == array4[i]) {
+            s++;
+        }
+    }
+
+    if(g == array4.Length) {
+        Console.WriteLine("Элементы в массиве стоят по возрастанию.");
+    } else if(f == array4.Length) {
+        Console.WriteLine("Элементы в массиве стоят по убыванию.");
+    } else if(s == array4.Length){
+        Console.WriteLine("Элементы в массиве равны.");
+    } else {
+        Console.WriteLine("Элементы в массиве расположены хаотично.");
     }
 
     break;
