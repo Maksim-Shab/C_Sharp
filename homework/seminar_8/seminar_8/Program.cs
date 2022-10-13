@@ -1,6 +1,6 @@
 ﻿// seminar_8
 
-int name = 54;
+int name = 56;
 
 switch (name){
 
@@ -33,7 +33,7 @@ switch (name){
         {
             for (int j = 0; j < columns; j++)
             {
-                fillArray[i, j] = new Random().Next(11, 99);
+                fillArray[i, j] = new Random().Next(1, 9);
             }
         }
         return fillArray;
@@ -83,6 +83,31 @@ switch (name){
 
     Console.Clear();
     
+    int[,] array1 = FillArray(4, 4);
+    PrintArray(array1);
+    MinNumberRow(array1);
+
+    void MinNumberRow(int[,] array) {
+        int min = 0 ;
+        int numberRow = 1;
+        for (int j = 0; j < array1.GetLength(1); j++)
+            {
+                min += array1[0 ,j];
+            }
+        for (int i = 1; i < array1.GetLength(0); i++)
+        {
+            int summ = 0;
+            for (int j = 0; j < array1.GetLength(1); j++)
+            {
+                summ += array1[i ,j];
+            }
+            if(min > summ) {
+                min = summ;
+                numberRow = i + 1;
+            }
+        }
+        Console.WriteLine("Cтрока № " + numberRow + " имеет наименьшую сумму элементов, равную: " + min);
+    }
 
     break;
     
