@@ -1,6 +1,6 @@
 ﻿// seminar_8
 
-int name = 56;
+int name = 58;
 
 switch (name){
 
@@ -123,7 +123,32 @@ switch (name){
 
     Console.Clear();
 
+    int[,] firtMatrix = FillArray(2,2);
+    Console.WriteLine("Матрица №1");
+    PrintArray(firtMatrix);
+    int[,] secondMatrix = FillArray(2,2);
+    Console.WriteLine("Матрица №2");
+    PrintArray(secondMatrix);
+    Console.WriteLine("Результирующая матрица будет:");
+    PrintArray(ProductTwoMatrix());
+
+    int[,] ProductTwoMatrix(){
+        int[,] productTwoMatrix = new int[2,2];
+        for (int i = 0; i < firtMatrix.GetLength(0); i++)
+        {
+            for (int j = 0; j < firtMatrix.GetLength(1); j++)
+            {
+                int summ = 0;
+                for (int k = 0; k < firtMatrix.GetLength(1); k++)
+                {
+                    summ += firtMatrix[i ,k] * secondMatrix[k, j];
+                }
+                productTwoMatrix[i, j] = summ;
+            }
+        }
+        return productTwoMatrix;
+    }
+
     break;
-
-
+    
 }
