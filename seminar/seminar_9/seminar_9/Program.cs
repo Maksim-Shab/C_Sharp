@@ -72,11 +72,12 @@ switch (name) {
     if((num / 10) <= 0){
         Console.WriteLine("Введите другое число");
     } else if(num / 10 > 0) {
-        Console.WriteLine("Результатом сложения цифр будет: " + Recurs2());    
+        Console.WriteLine("Результатом сложения цифр будет: " + Recurs2(num));    
     }
     
     int Recurs2(int num){
         if(num > 0){
+         
             summ += num % 10;
             Recurs2(num / 10);
         }
